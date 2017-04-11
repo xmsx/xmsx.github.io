@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="xMsx, 小孟三省" />
+  <meta name="keywords" content="Java," />
 
 
 
@@ -84,16 +84,18 @@
 
 
 
-<meta name="description" content="Do what I love ?">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://xmsx.github.io/tags/index.html">
+<meta name="description" content="先看一下结果···点开有详细解释哦~">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java 类中静态初始化">
+<meta property="og:url" content="http://xmsx.github.io/2017/04/11/Java 类中静态初始化/index.html">
 <meta property="og:site_name" content="xMsx">
-<meta property="og:description" content="Do what I love ?">
-<meta property="og:updated_time" content="2016-11-01T02:34:28.378Z">
+<meta property="og:description" content="先看一下结果···点开有详细解释哦~">
+<meta property="og:image" content="http://xmsx.github.io/uploads/java1.png">
+<meta property="og:updated_time" content="2017-04-11T06:51:26.207Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
-<meta name="twitter:description" content="Do what I love ?">
+<meta name="twitter:title" content="Java 类中静态初始化">
+<meta name="twitter:description" content="先看一下结果···点开有详细解释哦~">
+<meta name="twitter:image" content="http://xmsx.github.io/uploads/java1.png">
 
 
 
@@ -114,16 +116,10 @@
 
 
 
-  <link rel="canonical" href="http://xmsx.github.io/tags/"/>
+  <link rel="canonical" href="http://xmsx.github.io/2017/04/11/Java 类中静态初始化/"/>
 
 
-  <title>
-  
-
-  
-    标签 | xMsx
-  
-</title>
+  <title> Java 类中静态初始化 | xMsx </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -144,7 +140,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -234,16 +230,126 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
     
-      <div class="tag-cloud">
-        <div class="tag-cloud-title">
-            目前共计 5 个标签
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Java 类中静态初始化
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-04-11T13:13:01+08:00" content="2017-04-11">
+              2017-04-11
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/04/11/Java 类中静态初始化/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/04/11/Java 类中静态初始化/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
         </div>
-        <div class="tag-cloud-tags">
-          <a href="/tags/C/" style="font-size: 12px; color: #ccc">C++</a> <a href="/tags/Java/" style="font-size: 30px; color: #111">Java</a> <a href="/tags/Python/" style="font-size: 30px; color: #111">Python</a> <a href="/tags/生活/" style="font-size: 12px; color: #ccc">生活</a> <a href="/tags/试水/" style="font-size: 12px; color: #ccc">试水</a>
-        </div>
-      </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>先看一下结果···<br><img src="/uploads/java1.png" alt="PIC"><br>点开有详细解释哦~<br><a id="more"></a><br>直接上代码<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">father</span></span>&#123;</div><div class="line">	<span class="keyword">public</span> <span class="keyword">int</span> f = <span class="number">1</span>;</div><div class="line">	father()&#123;</div><div class="line">		show();</div><div class="line">		<span class="comment">//show() 此时被子类重写</span></div><div class="line">		<span class="comment">//且子类中未显示初始化，故打印"son block---0"</span></div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</div><div class="line">		System.out.println(<span class="string">"father---"</span>+f);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">static</span>&#123;</div><div class="line">		System.out.println(<span class="string">"father static block---"</span>);</div><div class="line">	&#125;</div><div class="line">	&#123;</div><div class="line">		System.out.println(<span class="string">"father block---"</span>+f);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">son</span> <span class="keyword">extends</span> <span class="title">father</span></span>&#123;</div><div class="line">	<span class="keyword">public</span> <span class="keyword">int</span> s = <span class="number">2</span>;</div><div class="line">	son()&#123;</div><div class="line">		<span class="keyword">super</span>();<span class="comment">//第一步</span></div><div class="line">		<span class="comment">//第二部：显示初始化，为 s 初始化</span></div><div class="line">		<span class="comment">//第三部：构造代码块初始化，打印 "son block---2"</span></div><div class="line">		show();</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</div><div class="line">		System.out.println(<span class="string">"son---"</span>+s);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">static</span>&#123;</div><div class="line">		System.out.println(<span class="string">"son static block---"</span>);</div><div class="line">	&#125;</div><div class="line">	&#123;</div><div class="line">		System.out.println(<span class="string">"son block---"</span>+s);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">test</span></span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</div><div class="line">		<span class="keyword">new</span> son();</div><div class="line">	&#125; </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag">#Java</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/22/i = i++ Java与C++的不同/" rel="next" title="i = i++; Java与C++的不同">
+                <i class="fa fa-chevron-left"></i> i = i++; Java与C++的不同
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -252,6 +358,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -271,8 +388,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/STYX HELIX.jpg"
@@ -358,6 +484,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -468,6 +605,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
 
   
 
@@ -484,9 +625,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'your-disqus-shortname';
-      var disqus_identifier = 'tags/index.html';
-      var disqus_title = "tags";
-      var disqus_url = 'http://xmsx.github.io/tags/index.html';
+      var disqus_identifier = '2017/04/11/Java 类中静态初始化/';
+      var disqus_title = "Java 类中静态初始化";
+      var disqus_url = 'http://xmsx.github.io/2017/04/11/Java 类中静态初始化/';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');
@@ -497,6 +638,13 @@
       }
 
       run_disqus_script('count.js');
+      
+        var disqus_config = function () {
+            this.page.url = disqus_url;
+            this.page.identifier = disqus_identifier;
+            this.page.title = disqus_title;
+        };
+        run_disqus_script('embed.js');
       
     </script>
   
